@@ -6,11 +6,11 @@ function displayQuote(){
 	});
 	
 	var quote = document.getElementsByClassName('quo')[0].innerHTML;
-	 $("#twitter").attr("text", quote);
+	 $("#twitter").attr("data-text", quote);
+	 console.log(quote);
 }
 
 document.getElementById("quoteButton").addEventListener("click", displayQuote);
-
 
 
 
