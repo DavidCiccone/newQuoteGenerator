@@ -1,8 +1,8 @@
 
 function displayQuote(){
-	$( ".quo" ).empty();
+	//$( ".quo" ).empty();
 	$.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(a) {
-	  $(".quo").replaceWith(a[0].content + '<p class="quo">— ' + a[0].title + '</p>')
+	  $(".quo").replaceWith('<p class="quo">— ' + a[0].content + '</p>' + '<p class="quo">— ' + a[0].title + '</p>')
 	});
 }
 
