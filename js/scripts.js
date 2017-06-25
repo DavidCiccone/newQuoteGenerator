@@ -6,7 +6,7 @@ function displayQuote(){
 	});
 	
 	var quote = document.getElementsByClassName('quo')[0].innerHTML;
-	 $("#twitter").attr("href", "https://twitter.com/intent/tweet?text=" + quote);
+	 $("#twitter").attr("text", quote);
 }
 
 document.getElementById("quoteButton").addEventListener("click", displayQuote);
