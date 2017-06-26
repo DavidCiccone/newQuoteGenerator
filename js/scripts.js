@@ -1,6 +1,6 @@
 
 var counter = 0;
-var displayQuote = document.getElementsByClassName('quo')[0].innerHTML;
+var storeQuote = document.getElementsByClassName('quo')[0].innerHTML;
 function displayQuote(){
 	
     
@@ -10,7 +10,7 @@ function displayQuote(){
 	});
 	
     
-console.log(displayQuote);
+console.log(storeQuote);
     $('#twitter-widget-' + counter).remove();
     
     var newAnchorTag = $('<a></a>')
