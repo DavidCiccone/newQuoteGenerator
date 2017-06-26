@@ -7,7 +7,7 @@ function displayQuote(){
     
 	$( ".quo" ).fadeOut("slow");
   $( ".quote" ).fadeOut("slow");
-	$.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(a) {
+	$.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(a, event) {
 	  $(".quote").replaceWith('<div class="quote"><p class="quo">' + a[0].content + '</p>' + '<p>— ' + a[0].title + '</p></div>')
       storeQuote = document.querySelector("body > div.wrapper > div > p:nth-child(2)").innerHTML;
       storeName = document.querySelector("body > div.wrapper > div > p:nth-child(4)").innerHTML;
@@ -23,6 +23,7 @@ function displayQuote(){
         
         twttr.widgets.load()
         ++counter;
+        event.preventDefault();
 	});
 	
     
