@@ -11,7 +11,7 @@ function displayQuote(){
 	  $(".quote").replaceWith('<div class="quote"><p class="quo">' + a[0].content + '</p>' + '<p>— ' + a[0].title + '</p></div>')
       storeQuote = document.querySelector("body > div.wrapper > div > p:nth-child(2)").innerHTML;
       storeName = document.querySelector("body > div.wrapper > div > p:nth-child(4)").innerHTML;
-      
+      event.preventDefault();
       $('#twitter-widget-' + counter).remove();
         
         var newAnchorTag = $('<a></a>')
@@ -23,7 +23,7 @@ function displayQuote(){
         
         twttr.widgets.load()
         ++counter;
-        event.preventDefault();
+        
 	});
 	
     
