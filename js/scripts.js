@@ -1,6 +1,6 @@
 
 var counter = 0;
-
+var displayQuote = document.getElementsByClassName('quo')[0].innerHTML;
 function displayQuote(){
 	
     
@@ -9,7 +9,7 @@ function displayQuote(){
 	  $(".quote").replaceWith('<div class="quote"><p class="quo">' + a[0].content + '</p>' + '<p>— ' + a[0].title + '</p></div>')
 	});
 	
-    var displayQuote = document.getElementsByClassName('quo')[0].innerHTML;
+    
 console.log(displayQuote);
     $('#twitter-widget-' + counter).remove();
     
