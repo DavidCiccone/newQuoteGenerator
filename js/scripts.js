@@ -6,10 +6,12 @@ var storeName = document.getElementsByClassName('quote')[0].innerHTML;
 function displayQuote(){
 	
     
-	$( ".quo" ).fadeOut("slow");
-  $( ".quote" ).fadeOut("slow");
-	$.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(a) {
-	  $(".quote").replaceWith('<div class="quote"><p class="quo">' + a[0].content + '</p>' + '<p>— ' + a[0].title + '</p></div>')
+	$.ajax({
+   
+    url: 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+    cache: false,
+    success: function(a) {
+    $(".quote").replaceWith('<div class="quote"><p class="quo">' + a[0].content + '</p>' + '<p>— ' + a[0].title + '</p></div>')
       storeQuote = document.querySelector("body > div.wrapper > div > p:nth-child(2)").innerHTML;
       storeName = document.querySelector("body > div.wrapper > div > p:nth-child(4)").innerHTML;
       
@@ -23,27 +25,15 @@ function displayQuote(){
         //$(".twitter-share-button").attr('data-text', "new stuff");
         
         twttr.widgets.load()
-        ++counter;
-
-	});
-	
-    
-    
-    
+        ++counter;},
+        error: function() {
+          console.log('API not working :(')
+        }
+  });    
 }
-
-
 
 
 document.getElementById("quoteButton").addEventListener("click", displayQuote);
-/*
-function twitterButton() {
 
-
-
-}
-
-twitterButton();
-*/
 });
 
