@@ -1,16 +1,14 @@
 
-var counter = 0;
-
 function displayQuote(){
 	
-    
+    var counter = 0;
 	$( ".quote" ).fadeOut("fast");
 	$.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(a) {
 	  $(".quote").replaceWith('<div class="quote"><p class="quo">' + a[0].content + '</p>' + '<p>— ' + a[0].title + '</p></div>')
 	});
 	
-    var store = document.getElementsByClassName('quo')[0].innerHTML;
-console.log(store);
+    var displayQuote = document.getElementsByClassName('quo')[0].innerHTML;
+console.log(displayQuote);
     $('#twitter-widget-' + counter).remove();
     
     var newAnchorTag = $('<a></a>')
