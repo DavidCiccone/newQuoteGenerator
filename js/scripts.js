@@ -1,6 +1,6 @@
 
 var counter = 0;
-var storeQuote = document.getElementsByClassName('quo')[0].innerHTML;
+
 function displayQuote(){
 	
     
@@ -9,8 +9,8 @@ function displayQuote(){
 	  $(".quote").replaceWith('<div class="quote"><p class="quo">' + a[0].content + '</p>' + '<p>— ' + a[0].title + '</p></div>')
 	});
 	
-    
-console.log(storeQuote);
+    var store = document.getElementsByClassName('quo')[0].innerHTML;
+console.log(store);
     $('#twitter-widget-' + counter).remove();
     
     var newAnchorTag = $('<a></a>')
