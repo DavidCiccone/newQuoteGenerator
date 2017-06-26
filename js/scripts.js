@@ -6,7 +6,7 @@ function displayQuote(){
 	});
 	
     var displayQuote = document.getElementsByClassName('quo')[0].innerHTML;
-
+console.log(displayQuote);
     $('#twitter-widget-0').remove();
 
     var newAnchorTag = $('<a></a>')
