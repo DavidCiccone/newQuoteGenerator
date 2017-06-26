@@ -23,12 +23,14 @@
     <div class="quote"><p class="quo">Click the button below to generate a random quote.</p></div>
     <button id="quoteButton">Generate Quote</button>
   </div>
-  
-<div id="twitter"></div>
-  
+  <div class="oneCoolDiv">
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet"
+  data-size="large" data-text="My original text">
+Tweet</a>
+  </div>
   <script src="assets/node_modules/jquery/dist/jquery.min.js"></script>
-    
-  <script>window.twttr = (function(d, s, id) {
+    <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
   if (d.getElementById(id)) return t;
@@ -44,6 +46,7 @@
 
   return t;
 }(document, "script", "twitter-wjs"));</script>
+ 
 <script src="js/scripts.js"></script>
 </body>
 </html>
